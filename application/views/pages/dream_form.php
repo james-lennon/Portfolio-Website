@@ -1,19 +1,9 @@
 <? $this->load->view('templates/header'); ?>
 <form class="ui form" action="<?= base_url() ?>dream_gen/generate">
   <div class="field">
-    <label>First Name</label>
-    <input type="text" name="first-name" placeholder="First Name">
+    <label>Theme</label>
+    <input type="text" name="theme" placeholder="e.g. Mountain">
   </div>
-  <div class="field">
-    <label>Last Name</label>
-    <input type="text" name="last-name" placeholder="Last Name">
-  </div>
-  <div class="field">
-    <div class="ui checkbox">
-      <input type="checkbox" tabindex="0" class="hidden">
-      <label>I agree to the Terms and Conditions</label>
-    </div>
-  </div>
-  <button class="ui button" type="submit">Submit</button>
+  <button class="ui button" type="submit">Generate</button>
 </form>
 <? $this->load->view('templates/footer'); ?>
