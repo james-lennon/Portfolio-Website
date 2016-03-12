@@ -8,4 +8,10 @@ class Dream_Gen extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->view('pages/dream_form');
 	}
+
+	public function generate () {
+		$this->load->model("dreams");
+		$filename = $this->dreams->generate_dream();
+		echo json_encode(["url" => $filename]);
+	}
 }

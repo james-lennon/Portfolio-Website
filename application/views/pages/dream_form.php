@@ -1,5 +1,5 @@
 <? $this->load->view('templates/header'); ?>
-<form class="ui form">
+<form class="ui form" action="<?= base_url() ?>dream_gen/generate">
   <div class="field">
     <label>First Name</label>
     <input type="text" name="first-name" placeholder="First Name">
