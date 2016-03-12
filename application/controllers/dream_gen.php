@@ -5,6 +5,9 @@ class Dream_Gen extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->load->helper('url');
+		$this->load->view('templates/header');
+		$this->load->view('pages/dream_form');
+		$this->load->view('templates/footer');
 	}
 }
