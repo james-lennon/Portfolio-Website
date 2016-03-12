@@ -11,4 +11,9 @@ class Dreams extends CI_Model {
 		return base_url().$local_name;
 	}
 
+	public function clean () {
+		// TODO: use php's file stuff
+		system("rm res/gen/*");
+	}
+
 }
