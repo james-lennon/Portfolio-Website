@@ -1,3 +1,4 @@
+<? $this->load->view('templates/header'); ?>
 <form class="ui form">
   <div class="field">
     <label>First Name</label>
@@ -15,3 +16,4 @@
   </div>
   <button class="ui button" type="submit">Submit</button>
 </form>
+<? $this->load->view('templates/footer'); ?>
