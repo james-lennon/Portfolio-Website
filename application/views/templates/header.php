@@ -11,6 +11,6 @@
     <script src="<?= base_url() ?>res/semantic/dist/semantic.min.js"></script>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="<?= base_url() ?>res/css/main.css">
 </head>
 <body>
