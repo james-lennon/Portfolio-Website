@@ -1,3 +1,8 @@
-#dream_segment {
+body {
+	margin-top: 50px;
+}
 
+#dream_segment {
+	/*max-width: 500px;
+	max-height: 500px;*/
 }
