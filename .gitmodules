@@ -1,0 +1,3 @@
+[submodule "application/bin/dream_gen"]
+	path = application/bin/dream_gen
+	url = https://github.com/jameslennon321/Dream-Journal-Generator.git
