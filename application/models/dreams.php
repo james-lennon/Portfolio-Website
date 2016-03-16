@@ -5,10 +5,12 @@ class Dreams extends CI_Model {
 
 	public function generate_dream ($theme = false) {
 		$this->load->helper("url");
-		$id = (int) (rand());
-		$local_name = "res/gen/$id.txt";
-		system("./bin/dream_gen/main.py");
-		return base_url().$local_name;
+		$result = [];
+		exec("./application/bin/dream_gen/main.py -n 1 -q -i", $result);
+		// exec("python", $result);
+		var_dump($result);
+		// TODO: check for bad JSON
+		return json_decode(implode($result,''));
 	}
 
 	public function clean () {
