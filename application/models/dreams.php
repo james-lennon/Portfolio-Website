@@ -7,7 +7,7 @@ class Dreams extends CI_Model {
 		$this->load->helper("url");
 		$id = (int) (rand());
 		$local_name = "res/gen/$id.txt";
-		system("echo yo > $local_name");
+		system("./bin/dream_gen/main.py");
 		return base_url().$local_name;
 	}
 

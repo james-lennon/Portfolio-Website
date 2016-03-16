@@ -11,8 +11,8 @@ class Dream_Gen extends CI_Controller {
 
 	public function generate ($theme = false) {
 		$this->load->model("dreams");
-		$filename = $this->dreams->generate_dream($theme);
-		echo json_encode(["url" => $filename]);
+		$url = $this->dreams->generate_dream($theme);
+		$this->load->view("components/dream_loaded", ['dream_url'=>$url]);
 	}
 
 	public function test () {

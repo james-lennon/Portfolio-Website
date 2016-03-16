@@ -14,4 +14,4 @@
 
     <link rel="stylesheet" href="<?= base_url() ?>res/css/main.css">
 </head>
-<body>
+<body class="<?= $body_class ?>">
