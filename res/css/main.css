@@ -10,11 +10,18 @@
 #dream_segment {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 500px;
-	max-height: 500px;
+	min-width: 500px;
 	min-height: 200px;
 }
 
 #view_dream_btn {
 	margin-top: 30px;
+}
+
+.dream_image {
+	max-height: 500px;
+}
+
+.dream_text {
+	font-size: 24pt;
 }

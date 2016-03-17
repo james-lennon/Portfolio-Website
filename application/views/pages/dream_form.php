@@ -27,17 +27,21 @@ $(document).ready(function(){
     dream_form.addClass("loading");
 
     theme = $('#dream_form input[name=theme]').val();
-    data = {topic: theme};
-    $.post(BASE_URL+'dream_gen/generate', data, function(data, status){
-      dream_form.remove()
-      $("#dream_segment").html(data);
-      $("#dream_segment").transition('pulse');
-    });
+    
+    load_dream(theme);
 
     return false;
   });
 });
 
+function load_dream (theme) {
+  data = {topic: theme};
+  $.post(BASE_URL+'dream_gen/generate', data, function(data, status){
+    dream_form.remove()
+    $("#dream_segment").html(data);
+    $("#dream_segment").transition('pulse');
+  });
+}
 
 </script>
 <? $this->load->view('templates/footer'); ?>
