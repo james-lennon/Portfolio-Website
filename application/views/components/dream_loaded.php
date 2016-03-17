@@ -5,11 +5,7 @@
 <div class="ui center aligned grid">
 	<div class="bottom aligned row">
 		<div class="column">
-			<?= $dream_data['dream'] ?>
-			<!-- <a class="ui huge button" id="view_dream_btn" href="<?= $dream_url ?>" target="_blank">
-				<i class="unhide icon"></i>
-				View PDF
-			</a> -->
+			<?= $dream_data->dream ?>
 		</div>
 	</div>
 </div>
