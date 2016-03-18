@@ -25,3 +25,12 @@
 .dream_text {
 	font-size: 24pt;
 }
+
+.login_body {
+	background-color: #DADADA;
+	margin-top: 50px;
+}
+
+#login_column {
+	max-width: 450px;
+}
