@@ -29,7 +29,14 @@ class Admin_Model extends CI_Model {
 	}
 
 	public function add_admin ($email, $password, $permissions = 0) {
+		$this->load->database();
 
+		$query = $this->db->query(
+			"INSERT INTO admin
+			 SET email = ?, password = ?, permissions = ?",
+			 [$email, password_hash($password), $permissions]);
+
+		return ($this->db->affected_rows == 1);
 	}
 
 }

@@ -29,4 +29,14 @@ class Admin extends CI_Controller {
 		}
 	}
 
+	public function add_admin($email, $password) {
+		if (!$this->is_cli_request()) {
+			echo "UNAUTHORIZED";
+		}
+
+		$this->load->model('admin_model');
+		$result = $this->admin_model->add_admin($email, $password);
+		echo "Added admin $email\nsuccess=$result";
+	}
+
 }
