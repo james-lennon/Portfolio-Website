@@ -19,20 +19,26 @@ class Admin extends CI_Controller {
 		}
 		else
 		{
-			$email    = $_POST['email'];
-			$password = $_POST['password'];
+			$email    = $this->input->post('email');
+			$password = $this->input->post('password');
 
 			$this->load->model('admin_model');
 			if ($this->admin_model->check_login($email, $password)) {
 				redirect("admin/index");
+			} else {
+				$this->load->view("pages/admin_login", ['error'=>'Invalid credentials']);
 			}
 		}
 	}
 
-	public function add_admin($email, $password) {
-		if (!$this->is_cli_request()) {
-			echo "UNAUTHORIZED";
-		}
+	public function add_admin () {
+		// if (!$this->input->is_cli_request()) {
+		// 	echo "UNAUTHORIZED";
+		// 	return;
+		// }
+
+		$email = "jameslennon321@gmail.com";
+		$password = "admintest";
 
 		$this->load->model('admin_model');
 		$result = $this->admin_model->add_admin($email, $password);

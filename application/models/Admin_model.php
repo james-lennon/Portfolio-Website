@@ -18,7 +18,7 @@ class Admin_Model extends CI_Model {
 
 		if ($result) {
 			$this->load->library('session');
-			$this->session->set_userdata('user_id', $query->row()->user_id);
+			$this->session->set_userdata('user_id', $query->row()->id);
 		}
 		return $result;
 	}
@@ -28,15 +28,15 @@ class Admin_Model extends CI_Model {
 		return $this->session->userdata('user_id');
 	}
 
-	public function add_admin ($email, $password, $permissions = 0) {
+	public function add_admin ($email, $password = 'test', $permissions = 0) {
 		$this->load->database();
 
 		$query = $this->db->query(
 			"INSERT INTO admin
 			 SET email = ?, password = ?, permissions = ?",
-			 [$email, password_hash($password), $permissions]);
+			 [$email, password_hash($password, PASSWORD_DEFAULT), $permissions]);
 
-		return ($this->db->affected_rows == 1);
+		return ($this->db->affected_rows() == 1);
 	}
 
 }

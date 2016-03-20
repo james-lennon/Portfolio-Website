@@ -21,10 +21,15 @@
         <div class="ui fluid large submit button">Login</div>
       </div>
 
-      <div class="ui error message"></div>
+      <div class="ui error message">
+      </div>
 
     </form>
-
+    <? if (isset($error)): ?>
+      <div class="ui error message">
+        <?= $error ?>
+      </div>
+    <? endif; ?>
     <div class="ui message">
       Forgot password? Click <a href="#">here</a>
     </div>
@@ -64,12 +69,6 @@ $(document).ready(function() {
         }
       }
     });
-    // $('.ui.form').submit(function() {
-    //   email    = $('#dream_form input[name=email]').val();
-    //   password = $('#dream_form input[name=password]').val();
-
-
-    // });
 });
 
 </script>
