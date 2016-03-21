@@ -31,18 +31,50 @@ class Admin extends CI_Controller {
 		}
 	}
 
-	public function add_admin () {
-		// if (!$this->input->is_cli_request()) {
-		// 	echo "UNAUTHORIZED";
-		// 	return;
-		// }
+	// public function add_admin () {
+	// 	$email = "jameslennon321@gmail.com";
+	// 	$password = "admintest";
 
-		$email = "jameslennon321@gmail.com";
-		$password = "admintest";
+	// 	$this->load->model('admin_model');
+	// 	$result = $this->admin_model->add_admin($email, $password);
+	// 	echo "Added admin $email\nsuccess=$result";
+	// }
 
-		$this->load->model('admin_model');
-		$result = $this->admin_model->add_admin($email, $password);
-		echo "Added admin $email\nsuccess=$result";
+	public function edit_project ($project_id = NULL) {
+		check_login();
+
+		$this->load->helper("url");
+
+		$data = [];
+		if ($project_id != NULL) {
+			$data['project_id'] = $project_id;
+		}
+
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules('title', 'Title', 'required');
+		$this->form_validation->set_rules('description', 'Description', 'required');
+		if ($this->form_validation->run() == FALSE)
+		{
+			$this->load->view("pages/project_form", $data);
+		}
+		else
+		{
+			$title       = $this->input->post('title');
+			$description = $this->input->post('description');
+
+			$this->load->model('admin_model');
+			if ($project_id != NULL) {
+				$this->admin_model->change_project($project_id, $title, $description);
+			} else {
+				$this->admin_model->add_project();
+			}
+			redirect("admin");
+		}
 	}
 
 }
+
+
+
+
+

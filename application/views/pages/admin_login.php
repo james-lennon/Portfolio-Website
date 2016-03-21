@@ -1,4 +1,4 @@
-<? $this->load->view("templates/header", ["body_class"=>"login_body"]) ?>
+<? $this->load->view("templates/header", ["body_class"=>"gray_body"]) ?>
 <div class="ui middle aligned center aligned grid">
   <div class="column" id="login_column">
     <h2 class="ui header">
