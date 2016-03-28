@@ -35,8 +35,7 @@ $(document).ready(function(){
 });
 
 function load_dream (theme) {
-  data = {topic: theme};
-  $.post(BASE_URL+'dream_gen/generate', data, function(data, status){
+  $.post(BASE_URL+'dream_gen/generate/'+theme, {}, function(data, status){
     dream_form.remove()
     $("#dream_segment").html(data);
     $("#dream_segment").transition('pulse');

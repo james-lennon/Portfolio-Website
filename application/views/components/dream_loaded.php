@@ -1,7 +1,7 @@
 <h2 class="ui green dividing header">
 	<i class="check circle icon"></i>
 	Dream Generated Successfully!
-</h4>
+</h2>
 <div class="ui center aligned grid">
 	<?
 		$img_url = $dream_data->image;
@@ -21,6 +21,10 @@
 		</div>
 	</div>
 	<div class="row">
+		<button class="ui labeled icon button" id="back_button">
+			<i class="angle left icon"></i>
+			Back
+		</button>
 		<button class="ui labeled icon button" id="reload_dream_btn">
 			<i class="refresh icon"></i>
 			Reload
@@ -34,5 +38,8 @@ $("#reload_dream_btn").click(function() {
 	$(this).addClass("loading").addClass("disabled");
 	$(this).prop("disabled",true);
 	load_dream(theme);
-})
+});
+$("#back_button").click(function() {
+	window.location.replace("<?= base_url() ?>/dream_gen");
+});
 </script>
