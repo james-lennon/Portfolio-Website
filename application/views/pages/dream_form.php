@@ -7,10 +7,10 @@
         <h1 class="ui dividing header">Dream Generator</h1>
       	<form class="ui form" id="dream_form">
       	  <div class="field">
-        		<label>Theme</label>
+        		<label>Theme (optional)</label>
         		<input type="text" name="theme" placeholder="e.g. Mountain">
       	  </div>
-      	  <button class="ui button" type="submit">Generate</button>
+      	  <button class="ui huge button" type="submit">Generate</button>
       	</form>
       </div>
     </div>
@@ -35,8 +35,7 @@ $(document).ready(function(){
 });
 
 function load_dream (theme) {
-  data = {topic: theme};
-  $.post(BASE_URL+'dream_gen/generate', data, function(data, status){
+  $.post(BASE_URL+'dream_gen/generate/'+theme, {}, function(data, status){
     dream_form.remove()
     $("#dream_segment").html(data);
     $("#dream_segment").transition('pulse');
