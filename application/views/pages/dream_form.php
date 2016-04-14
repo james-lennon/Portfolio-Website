@@ -7,10 +7,10 @@
         <h1 class="ui dividing header">Dream Generator</h1>
       	<form class="ui form" id="dream_form">
       	  <div class="field">
-        		<label>Theme</label>
+        		<label>Theme (optional)</label>
         		<input type="text" name="theme" placeholder="e.g. Mountain">
       	  </div>
-      	  <button class="ui button" type="submit">Generate</button>
+      	  <button class="ui huge button" type="submit">Generate</button>
       	</form>
       </div>
     </div>

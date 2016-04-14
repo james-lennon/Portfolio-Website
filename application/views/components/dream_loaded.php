@@ -21,11 +21,11 @@
 		</div>
 	</div>
 	<div class="row">
-		<button class="ui labeled icon button" id="back_button">
+		<button class="ui huge labeled icon button" id="back_button">
 			<i class="angle left icon"></i>
 			Back
 		</button>
-		<button class="ui labeled icon button" id="reload_dream_btn">
+		<button class="ui huge labeled icon button" id="reload_dream_btn">
 			<i class="refresh icon"></i>
 			Reload
 		</button>
