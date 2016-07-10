@@ -3,8 +3,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
 
+	public function __construct() {
+		parent::__construct();
+		$this->load->helper("url");
+	}
+
 	public function index () {
 		check_login();
+		$this->load->view("pages/portfolio", ['admin'=>true]);
 	}
 
 	public function login() {
@@ -13,7 +19,7 @@ class Admin extends CI_Controller {
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('email', 'Email', 'required');
 		$this->form_validation->set_rules('password', 'Password', 'required');
-		if ($this->form_validation->run() == FALSE)
+		if (!$this->form_validation->run())
 		{
 			$this->load->view("pages/admin_login");
 		}
@@ -66,7 +72,7 @@ class Admin extends CI_Controller {
 			if ($project_id != NULL) {
 				$this->admin_model->change_project($project_id, $title, $description);
 			} else {
-				$this->admin_model->add_project();
+				$this->admin_model->add_project($title, $description);
 			}
 			redirect("admin");
 		}

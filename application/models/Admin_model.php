@@ -39,4 +39,36 @@ class Admin_Model extends CI_Model {
 		return ($this->db->affected_rows() == 1);
 	}
 
+	public function add_project($title, $description) {
+		$this->load->database();
+
+		$data = [
+			'title'       => $title,
+			'description' => $description
+		];
+
+		$this->db->insert('project', $data);
+	}
+
+	public function change_project($project_id, $title, $description) {
+		
+		$data = [
+			'title'       => $title,
+			'description' => $description
+		];
+
+		$this->db->where('id', $project_id);
+		$this->db->update('project', $data);
+	}
+
+	public function get_projects() {
+		$this->load->database();
+
+		$query = $this->db->query("
+			SELECT * from project
+			");
+
+		return $query->result();
+	}
+
 }
