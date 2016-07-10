@@ -10,7 +10,9 @@ class Admin extends CI_Controller {
 
 	public function index () {
 		check_login();
-		$this->load->view("pages/portfolio", ['admin'=>true]);
+		
+		$projects = $this->admin_model->get_projects();
+		$this->load->view("pages/portfolio", ['admin'=>true, 'projects'=>$projects]);
 	}
 
 	public function login() {
