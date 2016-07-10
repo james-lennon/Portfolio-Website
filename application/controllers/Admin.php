@@ -10,7 +10,7 @@ class Admin extends CI_Controller {
 
 	public function index () {
 		check_login();
-		
+
 		$projects = $this->admin_model->get_projects();
 		$this->load->view("pages/portfolio", ['admin'=>true, 'projects'=>$projects]);
 	}
@@ -61,14 +61,18 @@ class Admin extends CI_Controller {
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('title', 'Title', 'required');
 		$this->form_validation->set_rules('description', 'Description', 'required');
+		$this->form_validation->set_rules('date', 'Date', 'required');
 		if ($this->form_validation->run() == FALSE)
 		{
 			$this->load->view("pages/project_form", $data);
 		}
 		else
 		{
-			$title       = $this->input->post('title');
-			$description = $this->input->post('description');
+			$title          = $this->input->post('title');
+			$description    = $this->input->post('description');
+			$img_url        = $this->input->post('img_url');
+			$date           = $this->input->post('date');
+			$date_timestamp = strtotime($date);
 
 			$this->load->model('admin_model');
 			if ($project_id != NULL) {

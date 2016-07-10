@@ -11,10 +11,22 @@
 						<input type="text" name="title" placeholder="Project Title" value="">
 					</div>
 				</div>
+				<label>Preview Image:</label>
+				<div class="field">
+					<div class="ui input">
+						<input type="url" name="img_url" placeholder="URL" value="">
+					</div>
+				</div>
 				<label>Description:</label>
 				<div class="field">
 					<div class="ui input">
-						<input type="text" name="description" placeholder="Description">
+						<textarea name="description" placeholder="Description"></textarea>
+					</div>
+				</div>
+				<label>Date:</label>
+				<div class="field">
+					<div class="ui input">
+						<input type="text" name="date" placeholder="Month & Year">
 					</div>
 				</div>
 				<input type="hidden" name="project_id" value="<? if (isset($project_id)) { echo $project_id; } ?>">

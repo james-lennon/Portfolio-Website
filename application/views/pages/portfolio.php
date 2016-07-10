@@ -3,7 +3,7 @@
 <div class="ui center aligned grid">
 	<div class="row">
 		<div class="column">
-			<div class="ui link cards">
+			<div class="ui three stackable link cards">
 				<? foreach ($projects as $project) {
 
 					$this->load->view('components/project_preview',['project'=>$project]);
