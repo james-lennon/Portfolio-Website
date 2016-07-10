@@ -3,11 +3,15 @@
 <div class="ui center aligned grid">
 	<div class="row">
 		<div class="column">
-			<? foreach ($projects as $project) {
-				var_dump($project);
-				print("<br>");
-			} 
-			?>
+			<div class="ui link cards">
+				<? foreach ($projects as $project) {
+
+					$this->load->view('components/project_preview',['project'=>$project]);
+
+					print("<br>");
+				} 
+				?>
+			</div>
 		</div>
 	</div>
 </div>
