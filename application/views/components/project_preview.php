@@ -5,7 +5,7 @@
   <div class="content">
     <a class="header"><?= $project->title ?></a>
     <div class="meta">
-      <span class="date">Joined in 2013</span>
+      <span class="date"><?= date("F Y", $project->date_timestamp) ?></span>
     </div>
     <div class="description">
       <?= $project->description ?>
