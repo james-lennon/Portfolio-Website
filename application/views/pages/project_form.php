@@ -29,6 +29,10 @@
 						<input type="text" name="date" placeholder="Month & Year">
 					</div>
 				</div>
+				<div class="ui checkbox">
+				  <input type="checkbox" name="is_featured">
+				  <label>Featured</label>
+				</div>
 				<input type="hidden" name="project_id" value="<? if (isset($project_id)) { echo $project_id; } ?>">
 				<div class="ui large submit button">Save</div>
 			  </div>

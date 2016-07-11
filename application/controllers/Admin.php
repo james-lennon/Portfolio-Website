@@ -73,12 +73,15 @@ class Admin extends CI_Controller {
 			$img_url        = $this->input->post('img_url');
 			$date           = $this->input->post('date');
 			$date_timestamp = strtotime($date);
+			$is_featured    = $this->input->post('is_featured');
 
 			$this->load->model('admin_model');
 			if ($project_id != NULL) {
-				$this->admin_model->change_project($project_id, $title, $description);
+				$this->admin_model->change_project(
+					$project_id, $title, $description, $img_url, $date_timestamp);
 			} else {
-				$this->admin_model->add_project($title, $description);
+				$this->admin_model->add_project(
+					$title, $description, $img_url, $date_timestamp);
 			}
 			redirect("admin");
 		}
