@@ -69,7 +69,7 @@ class Admin_Model extends CI_Model {
 		$this->load->database();
 
 		$query = $this->db->query("
-			SELECT * from project
+			SELECT * FROM project ORDER BY date_timestamp DESC
 			");
 
 		return $query->result();

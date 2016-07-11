@@ -7,9 +7,6 @@
     <div class="meta">
       <span class="date"><?= date("F Y", $project->date_timestamp) ?></span>
     </div>
-    <div class="description">
-      <?= $project->description ?>
-    </div>
   </div>
   <div class="extra content">
     <a>

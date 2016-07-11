@@ -14,6 +14,14 @@
 			</div>
 		</div>
 	</div>
+	<div class="row">
+
+			<? if(isset($admin) && $admin): ?>
+				<a class="ui black button" href="<?= base_url() ?>admin/edit_project">
+					<i class="plus icon"></i> Add
+				</a>
+			<? endif; ?>
+	</div>
 </div>
 
 <? $this->load->view("templates/footer"); ?>
