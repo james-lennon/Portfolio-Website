@@ -52,7 +52,8 @@ class Admin_Model extends CI_Model {
 		$this->db->insert('project', $data);
 	}
 
-	public function change_project($project_id, $title, $description, $img_url, $date_timestamp) {
+	public function change_project($project_id, $title, $description, 
+		$img_url, $date_timestamp) {
 		
 		$data = [
 			'title'       => $title,

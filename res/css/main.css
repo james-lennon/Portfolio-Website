@@ -43,4 +43,12 @@
 
 #project_form_column {
 	max-width: 600px;
+	position: relative;
+	top: 100px;
+}
+
+/* portfolio stuff */
+
+#title-bar {
+	min-height: 250px;
 }
