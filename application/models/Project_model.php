@@ -3,8 +3,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Project_model extends CI_Model {
 
-	public function add_project($title, $description, $img_url, $date_timestamp) {
+	public function __construct() {
+		parent::__construct();
 		$this->load->database();
+	}
+
+	public function add_project($title, $description, $img_url, $date_timestamp) {
 
 		$data = [
 			'title'          => $title,
@@ -30,8 +34,16 @@ class Project_model extends CI_Model {
 		$this->db->update('project', $data);
 	}
 
+	public function get_project($project_id) {
+
+		$query = $this->db->query("SELECT * FROM project WHERE id = ?",
+						[$project_id]);
+
+		return $query->row();
+
+	}
+
 	public function get_projects() {
-		$this->load->database();
 
 		$query = $this->db->query("
 			SELECT * FROM project ORDER BY date_timestamp DESC

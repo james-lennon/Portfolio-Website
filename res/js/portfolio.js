@@ -1,4 +1,5 @@
 
+BASE_URL = "http://localhost:8888/"
 
 $(document).ready(function() {
 
@@ -30,6 +31,14 @@ function setHeaderVisible (visible) {
 }
 
 function showModalForProject(projectId) {
-	$("#project-modal").modal('show');
-	console.log(projectId);
+
+	projectModal = $("#project-modal");
+
+	projectModal.modal('show');
+
+	$.get(BASE_URL + "view/project/" + projectId, function(data) {
+		projectModal.html(data);
+		console.log(data);
+	});
+
 }
