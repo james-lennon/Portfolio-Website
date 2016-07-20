@@ -8,8 +8,8 @@ class View extends CI_Controller {
 		$this->load->model("project_model");
 
 		$project = $this->project_model->get_project($project_id);
-
-		var_dump($project);
+		
+		$this->load->view("components/project_view", ["project" => $project]);
 
 	}
 

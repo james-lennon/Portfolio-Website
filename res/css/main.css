@@ -52,3 +52,7 @@
 #title-bar {
 	min-height: 250px;
 }
+
+#project-modal {
+	min-height: 500px;
+}
