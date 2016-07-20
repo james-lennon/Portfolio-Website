@@ -6,12 +6,15 @@ class Admin extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->load->helper("url");
+		$this->load->model("admin_model");
 	}
 
 	public function index () {
 		check_login();
 
-		$projects = $this->admin_model->get_projects();
+		$this->load->model("project_model");
+
+		$projects = $this->project_model->get_projects();
 		$this->load->view("pages/portfolio", ['admin'=>true, 'projects'=>$projects]);
 	}
 
@@ -75,12 +78,12 @@ class Admin extends CI_Controller {
 			$date_timestamp = strtotime($date);
 			$is_featured    = $this->input->post('is_featured');
 
-			$this->load->model('admin_model');
+			$this->load->model('project_model');
 			if ($project_id != NULL) {
-				$this->admin_model->change_project(
+				$this->project_model->change_project(
 					$project_id, $title, $description, $img_url, $date_timestamp);
 			} else {
-				$this->admin_model->add_project(
+				$this->project_model->add_project(
 					$title, $description, $img_url, $date_timestamp);
 			}
 			redirect("admin");

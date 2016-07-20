@@ -10,11 +10,16 @@ class Portfolio extends CI_Controller {
 
 	public function index () {
 
-		$this->load->model('admin_model');
+		$this->load->model('project_model');
 
-		$projects = $this->admin_model->get_projects();
+		$projects = $this->project_model->get_projects();
 
 		$this->load->view("pages/portfolio", ['admin'=>false, 'projects' => $projects]);
+	}
+
+	public function increment_project($project_id) {
+
+		$this->load->model();
 	}
 
 }
