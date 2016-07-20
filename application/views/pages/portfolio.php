@@ -52,6 +52,10 @@
 	</div>
 </div>
 
+<div class="ui modal" id="project-modal">
+	<p>Lorem ipsum dopem flipsum.</p>
+</div>
+
 <script type="text/javascript" src="<?= base_url() ?>res/js/portfolio.js"></script>
 
 <? $this->load->view("templates/footer"); ?>

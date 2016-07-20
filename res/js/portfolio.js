@@ -1,7 +1,6 @@
 
 
 $(document).ready(function() {
-	console.log("yo\nyo\nyo\n");
 
 	$("#nav-menu").hide();
 
@@ -11,6 +10,11 @@ $(document).ready(function() {
         } else {
             setHeaderVisible(false);
         }
+    });
+
+    $(".project-card").click(function() {
+    	projectId = $(this).attr("project-id");
+    	showModalForProject(projectId);
     });
 
 });
@@ -23,4 +27,9 @@ function setHeaderVisible (visible) {
 	} else {
 		menu.fadeOut(250);
 	}
+}
+
+function showModalForProject(projectId) {
+	$("#project-modal").modal('show');
+	console.log(projectId);
 }

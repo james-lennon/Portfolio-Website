@@ -1,4 +1,4 @@
-<div class="ui card">
+<div class="ui card project-card" project-id="<?= $project->id ?>">
   <div class="image">
     <img src="<?= $project->img_url ?>">
   </div>
