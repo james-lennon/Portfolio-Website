@@ -6,7 +6,7 @@ $(document).ready(function() {
 	$("#nav-menu").hide();
 
 	$(window).scroll(function() {
-        if($(window).scrollTop() > 0) {
+        if($(window).scrollTop() > 250) {
             setHeaderVisible(true);
         } else {
             setHeaderVisible(false);

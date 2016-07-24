@@ -2,7 +2,7 @@
 
 <div class="ui top fixed menu" id="nav-menu">
 	<div class="item">
-		<img src="/images/logo.png">
+		<img class="ui mini circular image" src="<?= base_url()."res/img/homepage/profile.jpg" ?>">
 	</div>
 	<h1 class="ui huge header">James Lennon</h1>
 	<div class="ui right secondary stackable menu">
@@ -13,14 +13,27 @@
 </div>
 
 
-<div class="ui very padded raised container segment" id="title-bar">
-	<h1 class="ui huge header">James Lennon</h1>
-
-	<div class="ui bottom right floated secondary stackable menu">
-	  	<a class="item">Features</a>
-		<a class="item">Testimonials</a>
-	 	<a class="item">Sign-in</a>
+<div class="ui basic container segment grid" id="title-bar">
+	<div class="row">
+		<div class="five wide column">
+			<img class="ui medium circular image" src="<?= base_url()."res/img/homepage/profile.jpg" ?>">
+		</div>
+		<div class="five wide column">
+			<h1 class="ui left floated huge header">James Lennon</h1>
+		</div>
 	</div>
+	
+	<div class="row">
+		<div class="right floated column">
+			<div class="ui bottom right floated secondary stackable menu">
+			  	<a class="item">Features</a>
+				<a class="item">Testimonials</a>
+			 	<a class="item">Sign-in</a>
+			</div>
+		</div>
+	</div>
+	<div class="ui divider"></div>
+	
 </div>
 
 <div class="ui container">

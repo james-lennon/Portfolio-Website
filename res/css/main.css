@@ -51,11 +51,11 @@
 
 #title-bar {
 	min-height: 250px;
+	padding: 50px;
 }
 
 .square-image {
 	overflow: hidden;
-	
 }
 
 #project-modal {
@@ -63,6 +63,6 @@
 }
 
 #homepage-footer {
-	/*min-height: 500px;*/
+	margin-top: 50px;
 	padding: 30px;
 }
