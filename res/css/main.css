@@ -53,6 +53,16 @@
 	min-height: 250px;
 }
 
+.square-image {
+	overflow: hidden;
+	
+}
+
 #project-modal {
 	min-height: 500px;
+}
+
+#homepage-footer {
+	/*min-height: 500px;*/
+	padding: 30px;
 }
