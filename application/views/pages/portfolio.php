@@ -14,12 +14,15 @@
 
 
 <div class="ui basic container segment grid" id="title-bar">
-	<div class="row">
+	<div class="middle aligned row">
 		<div class="five wide column">
 			<img class="ui medium circular image" src="<?= base_url()."res/img/homepage/profile.jpg" ?>">
 		</div>
-		<div class="five wide column">
-			<h1 class="ui left floated huge header">James Lennon</h1>
+		<div class="seven wide column">
+			<h1 class="ui left floated huge header">
+				James Lennon
+				<div class="sub header"><em>I like pizza and stuff.</em></div>
+			</h1>
 		</div>
 	</div>
 	
