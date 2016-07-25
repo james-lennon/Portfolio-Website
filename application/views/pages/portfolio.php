@@ -2,9 +2,13 @@
 
 <div class="ui top fixed menu" id="nav-menu">
 	<div class="item">
-		<img class="ui mini circular image" src="<?= base_url()."res/img/homepage/profile.jpg" ?>">
+		<div class="ui mini image">
+			<img class="ui mini circular image" src="<?= base_url()."res/img/homepage/profile.jpg" ?>">
+		</div>
+		<div class="content">
+			<h1 class="ui huge header">James Lennon</h1>
+		</div>
 	</div>
-	<h1 class="ui huge header">James Lennon</h1>
 	<div class="ui right secondary stackable menu">
 	  	<a class="item">Features</a>
 		<a class="item">Testimonials</a>
