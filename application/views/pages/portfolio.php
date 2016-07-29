@@ -1,6 +1,6 @@
 <? $this->load->view("templates/header", ['body_class'=>'']); ?>
 
-<div class="ui top fixed menu" id="nav-menu">
+<div class="ui top fixed blurred menu" id="nav-menu">
 	<div class="item">
 		<div class="ui mini image">
 			<img class="ui mini circular image" src="<?= base_url()."res/img/homepage/profile.jpg" ?>">
