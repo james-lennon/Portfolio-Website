@@ -19,19 +19,16 @@
 
 <div class="ui basic container segment grid" id="title-bar">
 	<div class="middle aligned row">
-		<div class="five wide column">
-			<img class="ui medium circular image" src="<?= base_url()."res/img/homepage/profile.jpg" ?>">
+		<div class="two wide column">
+			<img class="ui small circular image" src="<?= base_url()."res/img/homepage/profile.jpg" ?>">
 		</div>
-		<div class="seven wide column">
+		<div class="five wide column">
 			<h1 class="ui left floated huge header">
 				James Lennon
 				<div class="sub header"><em>I like pizza and stuff.</em></div>
 			</h1>
 		</div>
-	</div>
-	
-	<div class="row">
-		<div class="right floated column">
+		<div class="nine wide bottom aligned column">
 			<div class="ui bottom right floated secondary stackable menu">
 			  	<a class="item">Features</a>
 				<a class="item">Testimonials</a>
@@ -39,6 +36,16 @@
 			</div>
 		</div>
 	</div>
+	
+	<!-- <div class="row">
+		<div class="right floated column">
+			<div class="ui bottom right floated secondary stackable menu">
+			  	<a class="item">Features</a>
+				<a class="item">Testimonials</a>
+			 	<a class="item">Sign-in</a>
+			</div>
+		</div>
+	</div> -->
 	<div class="ui divider"></div>
 	
 </div>
