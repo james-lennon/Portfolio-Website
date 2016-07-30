@@ -15,11 +15,11 @@ $(document).ready(function() {
 
     $(".project-card").click(function() {
     	projectId = $(this).attr("project-id");
-    	showModalForProject(projectId);
+    	setModalVisible(true, projectId);
     });
 
     $("#modal-back").click(function() {
-    	$("#project-modal").modal("hide");
+    	setModalVisible(false);
     });
 
 });
@@ -34,19 +34,24 @@ function setHeaderVisible (visible) {
 	}
 }
 
-function showModalForProject(projectId) {
+function setModalVisible(visible, projectId) {
 
 	projectModal = $("#project-modal");
 	projectInfo  = $("#project-info");
 
-	projectModal.modal({
-    	blurring: true,
-    	inverted: true
-  	}).modal('show');
+	if (visible) {
+		projectModal.modal({
+	    	blurring: true,
+	    	inverted: true
+	  	}).modal('show');
 
-	$.get(BASE_URL + "view/project/" + projectId, function(data) {
-		projectInfo.html(data);
-		console.log(data);
-	});
+		$.get(BASE_URL + "view/project/" + projectId, function(data) {
+			projectInfo.html(data);
+			projectModal.modal('refresh');
+		});
+	} else {
+		projectModal.modal('hide');
+	}
+	
 
 }
