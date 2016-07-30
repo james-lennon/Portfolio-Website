@@ -69,8 +69,7 @@
 
 #project-modal {
 	min-height: 500px;
-	background-color: white;
-	opacity: 0.95;
+	background: rgba(255,255,255,.75);
 }
 
 #homepage-footer {
