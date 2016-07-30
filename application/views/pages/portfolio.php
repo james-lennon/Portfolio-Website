@@ -1,18 +1,17 @@
 <? $this->load->view("templates/header", ['body_class'=>'']); ?>
 
 <div class="ui top fixed blurred menu" id="nav-menu">
-	<div class="item">
+	<div class="basic item">
 		<div class="ui mini image">
 			<img class="ui mini circular image" src="<?= base_url()."res/img/homepage/profile.jpg" ?>">
 		</div>
-		<div class="content">
+		<!-- <div class="content">
 			<h1 class="ui huge header">James Lennon</h1>
-		</div>
+		</div> -->
 	</div>
 	<div class="ui right secondary stackable menu">
-	  	<a class="item">Features</a>
-		<a class="item">Testimonials</a>
-	 	<a class="item">Sign-in</a>
+	  	<a class="item">Projects</a>
+		<a class="item">About</a>
 	</div>
 </div>
 
@@ -30,22 +29,11 @@
 		</div>
 		<div class="nine wide bottom aligned column">
 			<div class="ui bottom right floated secondary stackable menu">
-			  	<a class="item">Features</a>
-				<a class="item">Testimonials</a>
-			 	<a class="item">Sign-in</a>
+			  	<a class="item">Projects</a>
+				<a class="item">About</a>
 			</div>
 		</div>
 	</div>
-	
-	<!-- <div class="row">
-		<div class="right floated column">
-			<div class="ui bottom right floated secondary stackable menu">
-			  	<a class="item">Features</a>
-				<a class="item">Testimonials</a>
-			 	<a class="item">Sign-in</a>
-			</div>
-		</div>
-	</div> -->
 	<div class="ui divider"></div>
 	
 </div>
@@ -109,8 +97,17 @@
     </div>
   </div>
 
-<div class="ui modal" id="project-modal">
-	<p>Lorem ipsum dopem flipsum.</p>
+<div class="ui basic long scrolling modal" id="project-modal">
+
+	<div class="content">
+		<div class="ui labeled icon button" id="modal-back">
+			<i class="left arrow icon"></i>
+			Back
+		</div>
+		<br>
+		<br>
+		<div id="project-info"></div>
+	</div>
 </div>
 
 <script type="text/javascript" src="<?= base_url() ?>res/js/portfolio.js"></script>

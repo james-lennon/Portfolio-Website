@@ -18,6 +18,10 @@ $(document).ready(function() {
     	showModalForProject(projectId);
     });
 
+    $("#modal-back").click(function() {
+    	$("#project-modal").modal("hide");
+    });
+
 });
 
 function setHeaderVisible (visible) {
@@ -33,11 +37,15 @@ function setHeaderVisible (visible) {
 function showModalForProject(projectId) {
 
 	projectModal = $("#project-modal");
+	projectInfo  = $("#project-info");
 
-	projectModal.modal('show');
+	projectModal.modal({
+    	blurring: true,
+    	inverted: true
+  	}).modal('show');
 
 	$.get(BASE_URL + "view/project/" + projectId, function(data) {
-		projectModal.html(data);
+		projectInfo.html(data);
 		console.log(data);
 	});
 
