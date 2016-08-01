@@ -12,7 +12,15 @@
 					<h1 class="ui header"><?= $project->title ?></h1>
 				</div>
 				<div class="row">
-					<p>Buttons go here.</p>
+					<? if ($project->ios_url != NULL): ?>
+					<a href="<?= $project->ios_url ?>"><i class="large apple link icon"></i></a>
+					<? endif; ?>
+					<? if ($project->android_url != NULL): ?>
+					<a href="<?= $project->android_url ?>"><i class="large android link icon"></i></a>
+					<? endif; ?>
+					<? if ($project->web_url != NULL): ?>
+					<a href="<?= $project->web_url ?>"><i class="large external link icon"></i></a>
+					<? endif; ?>
 				</div>
 			</div>
 		</div>

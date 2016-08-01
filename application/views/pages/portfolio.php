@@ -1,6 +1,6 @@
 <? $this->load->view("templates/header", ['body_class'=>'']); ?>
 
-<div class="ui top fixed blurred menu" id="nav-menu">
+<div class="ui top fixed menu" id="nav-menu">
 	<div class="basic item">
 		<div class="ui mini image">
 			<img class="ui mini circular image" src="<?= base_url()."res/img/homepage/profile.jpg" ?>">
@@ -19,7 +19,8 @@
 <div class="ui basic container segment grid" id="title-bar">
 	<div class="middle aligned row">
 		<div class="two wide column">
-			<img class="ui small circular image" src="<?= base_url()."res/img/homepage/profile.jpg" ?>">
+			<!-- <img class="ui small circular image" src="<?= base_url()."res/img/homepage/profile.jpg" ?>"> -->
+			<img class="ui small circular image" src="/res/img/homepage/profile.jpg">
 		</div>
 		<div class="five wide column">
 			<h1 class="ui left floated huge header">
