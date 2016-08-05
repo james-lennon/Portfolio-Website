@@ -64,7 +64,17 @@
 				
 				<br>
 				<input type="hidden" name="project_id" value="<? if (isset($project_id)) { echo $project_id; } ?>">
-				<div class="ui large submit button">Save</div>
+				
+				<? if (isset($project)): ?>
+				<div class="ui buttons">
+					<a class="ui large red button" href="<?= base_url() ?>admin/delete_project/<?= $project->id ?>">Delete</a>
+					<div class="ui or"></div>
+					<div class="ui large submit button">Save</div>
+				</div>
+				<? else: ?>
+					<div class="ui large submit button">Add</div>
+				<? endif; ?>
+
 			  </div>
 
 			  <div class="ui error message">
