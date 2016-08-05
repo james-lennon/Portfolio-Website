@@ -17,10 +17,15 @@ class View extends CI_Controller {
 		/* get project data */
 		$project = $this->project_model->get_project($project_id);
 
-		/* increment view count for this project */
-		$this->project_model->increment_view_count($project_id);
+		$logged_in = $this->admin_model->is_logged_in();
+		
+		if (!$logged_in) {
 
-		$this->load->view("components/project_view", ["project" => $project, "admin"=>$this->admin_model->is_logged_in()]);
+			/* increment view count for this project */
+			$this->project_model->increment_view_count($project_id);
+		}
+
+		$this->load->view("components/project_view", ["project" => $project, "admin"=>$logged_in]);
 	}
 
 }
