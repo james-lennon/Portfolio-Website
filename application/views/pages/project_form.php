@@ -108,6 +108,24 @@ $(document).ready(function() {
 			  prompt : 'Please enter a description'
 			}
 		  ]
+		},
+		img_url: {
+		  identifier  : 'img_url',
+		  rules: [
+			{
+			  type   : 'empty',
+			  prompt : 'Please enter an image url'
+			}
+		  ]
+		},
+		date: {
+		  identifier  : 'date',
+		  rules: [
+			{
+			  type   : 'empty',
+			  prompt : 'Please enter a date'
+			}
+		  ]
 		}
 	  }
 	});

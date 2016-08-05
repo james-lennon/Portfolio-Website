@@ -19,7 +19,6 @@ class Admin extends CI_Controller {
 	}
 
 	public function login() {
-		$this->load->helper("url");
 
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('email', 'Email', 'required');
@@ -54,8 +53,6 @@ class Admin extends CI_Controller {
 	public function edit_project ($project_id = NULL) {
 
 		check_login();
-
-		$this->load->helper("url");
 
 		$data = [];
 		if ($project_id != NULL) {
@@ -96,6 +93,18 @@ class Admin extends CI_Controller {
 			}
 			redirect("admin");
 		}
+	}
+
+	public function delete_project($project_id) {
+
+		check_login();
+
+		$this->load->model('project_model');
+
+		$this->project_model->delete_project($project_id);
+
+		redirect("admin");
+
 	}
 
 }

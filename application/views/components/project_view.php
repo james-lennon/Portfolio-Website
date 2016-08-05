@@ -22,7 +22,7 @@
 					<a href="<?= $project->web_url ?>"><i class="large external link icon"></i></a>
 					<? endif; ?>
 					<? if ($admin): ?>
-					<a href="<?= base_url() ?>admin/edit_project/<?= $project->id ?>"><i class="large external link icon"></i></a>
+					<a href="<?= base_url() ?>admin/edit_project/<?= $project->id ?>"><i class="large black edit icon"></i></a>
 					<? endif; ?>
 				</div>
 			</div>
