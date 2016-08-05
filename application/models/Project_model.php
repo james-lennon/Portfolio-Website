@@ -8,12 +8,17 @@ class Project_model extends CI_Model {
 		$this->load->database();
 	}
 
-	public function add_project($title, $description, $img_url, $date_timestamp) {
+	public function add_project(
+		$title, $description, $img_url, $web_url, $ios_url, 
+		$android_url,$date_timestamp) {
 
 		$data = [
 			'title'          => $title,
 			'description'    => $description,
 			'img_url'        => $img_url,
+			'web_url'        => $web_url,
+			'ios_url'        => $ios_url,
+			'android_url'    => $android_url,
 			'date_timestamp' => $date_timestamp
 		];
 
