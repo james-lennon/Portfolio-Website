@@ -52,6 +52,5 @@ function setModalVisible(visible, projectId) {
 	} else {
 		projectModal.modal('hide');
 	}
-	
 
 }
