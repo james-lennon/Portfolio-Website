@@ -10,7 +10,7 @@ class Project_model extends CI_Model {
 
 	public function add_project(
 		$title, $description, $img_url, $web_url, $ios_url, 
-		$android_url,$date_timestamp) {
+		$android_url,$date_timestamp, $is_featured) {
 
 		$data = [
 			'title'          => $title,
@@ -19,7 +19,8 @@ class Project_model extends CI_Model {
 			'web_url'        => $web_url,
 			'ios_url'        => $ios_url,
 			'android_url'    => $android_url,
-			'date_timestamp' => $date_timestamp
+			'date_timestamp' => $date_timestamp,
+			'is_featured'    => $is_featured ? 1 : 0
 		];
 
 		$this->db->insert('project', $data);
@@ -27,7 +28,7 @@ class Project_model extends CI_Model {
 
 	public function change_project(
 		$project_id, $title, $description, $img_url, $web_url, $ios_url, 
-		$android_url, $date_timestamp) {
+		$android_url, $date_timestamp, $is_featured) {
 		
 		$data = [
 			'title'          => $title,
@@ -36,7 +37,8 @@ class Project_model extends CI_Model {
 			'web_url'        => $web_url,
 			'ios_url'        => $ios_url,
 			'android_url'    => $android_url,
-			'date_timestamp' => $date_timestamp
+			'date_timestamp' => $date_timestamp,
+			'is_featured'    => $is_featured ? 1 : 0
 		];
 
 		$this->db->where('id', $project_id);

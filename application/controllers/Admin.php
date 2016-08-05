@@ -84,15 +84,15 @@ class Admin extends CI_Controller {
 			$android_url    = $this->input->post('android_url');
 			$date           = $this->input->post('date');
 			$date_timestamp = strtotime($date);
-			$is_featured    = $this->input->post('is_featured') == "on" ? 1 : 0;
+			$is_featured    = $this->input->post('is_featured') == "on";
 
 			$this->load->model('project_model');
 			if ($project_id != NULL) {
 				$this->project_model->change_project(
-					$project_id, $title, $description, $img_url, $web_url, $ios_url, $android_url, $date_timestamp);
+					$project_id, $title, $description, $img_url, $web_url, $ios_url, $android_url, $date_timestamp, $is_featured);
 			} else {
 				$this->project_model->add_project(
-					$title, $description, $img_url, $web_url, $ios_url, $android_url, $date_timestamp);
+					$title, $description, $img_url, $web_url, $ios_url, $android_url, $date_timestamp, $is_featured);
 			}
 			redirect("admin");
 		}
