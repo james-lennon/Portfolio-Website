@@ -52,7 +52,7 @@ class Admin extends CI_Controller {
 	// }
 
 	public function edit_project ($project_id = NULL) {
-		
+
 		check_login();
 
 		$this->load->helper("url");
@@ -81,7 +81,7 @@ class Admin extends CI_Controller {
 			$img_url        = $this->input->post('img_url');
 			$date           = $this->input->post('date');
 			$date_timestamp = strtotime($date);
-			$is_featured    = $this->input->post('is_featured');
+			$is_featured    = $this->input->post('is_featured') == "on" ? 1 : 0;
 
 			$this->load->model('project_model');
 			if ($project_id != NULL) {
