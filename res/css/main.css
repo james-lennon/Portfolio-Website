@@ -72,6 +72,11 @@
 	background: rgba(255,255,255,.75);
 }
 
+#contact-modal {
+	/*min-height: 500px;*/
+	background: rgba(255,255,255,.75);
+}
+
 #homepage-footer {
 	margin-top: 50px;
 	padding: 30px;

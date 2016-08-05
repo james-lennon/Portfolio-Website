@@ -22,6 +22,12 @@ $(document).ready(function() {
     	setModalVisible(false);
     });
 
+    $("#contact-modal-back").click(function() {
+    	setContactModalVisible(false);
+    });
+
+    // setContactModalVisible(true);
+
 });
 
 function setHeaderVisible (visible) {
@@ -52,5 +58,21 @@ function setModalVisible(visible, projectId) {
 	} else {
 		projectModal.modal('hide');
 	}
+
+}
+
+function setContactModalVisible(visible) {
+
+	contactModal = $("#contact-modal");
+
+	if (visible) {
+		contactModal.modal({
+	    	blurring: true,
+	    	inverted: true
+	  	}).modal('show');
+	} else {
+		contactModal.modal('hide');
+	}
+
 
 }
