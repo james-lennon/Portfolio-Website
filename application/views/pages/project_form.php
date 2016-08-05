@@ -3,26 +3,26 @@
 	<div class="row">
 		<div class="column" id="project_form_column">
 			<h2 class="ui dividing header"><?= isset($project_id) ? "Edit" : "Add" ?> Project</h2>
-			<form class="ui large left aligned form" action="<?= base_url() ?>admin/edit_project" method="post">
+			<form class="ui large left aligned form" action="<?= base_url() ?>admin/edit_project<? if (isset($project)) echo "/$project->id" ?>" method="post">
 			  <div class="ui stacked segment">
 				<div class="field">
 					<label>Title:</label>
 					<div class="ui input">
-						<input type="text" name="title" placeholder="Project Title" value="">
+						<input type="text" name="title" placeholder="Project Title" value="<? if (isset($project)) echo $project->title; ?>">
 					</div>
 				</div>
 				
 				<div class="field">
 					<label>Preview Image:</label>
 					<div class="ui input">
-						<input type="url" name="img_url" placeholder="URL" value="">
+						<input type="url" name="img_url" placeholder="URL" value="<? if (isset($project)) echo $project->img_url; ?>">
 					</div>
 				</div>
 
 				<div class="field">
 					<label>Description:</label>
 					<div class="ui input">
-						<textarea name="description" placeholder="Description"></textarea>
+						<textarea name="description" placeholder="Description"><? if (isset($project)) echo $project->description; ?></textarea>
 					</div>
 				</div>
 				
@@ -30,12 +30,12 @@
 
 					<div class="field">
 						<div class="ui input">
-							<input type="text" name="date" placeholder="Date">
+							<input type="text" name="date" placeholder="Date" value="<? if (isset($project)) echo date("F Y", $project->date_timestamp); ?>">
 						</div>
 					</div>
 
 					<div class="ui checkbox">
-					  <input type="checkbox" name="is_featured">
+					  <input type="checkbox" name="is_featured" <? if (isset($project) && $project->is_featured == 1) echo "checked";  ?> >
 					  <label>Featured</label>
 					</div>
 

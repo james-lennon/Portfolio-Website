@@ -52,13 +52,18 @@ class Admin extends CI_Controller {
 	// }
 
 	public function edit_project ($project_id = NULL) {
+		
 		check_login();
 
 		$this->load->helper("url");
 
 		$data = [];
 		if ($project_id != NULL) {
-			$data['project_id'] = $project_id;
+			$this->load->model("project_model");
+
+			$project = $this->project_model->get_project($project_id);
+
+			$data['project'] = $project;
 		}
 
 		$this->load->library('form_validation');
