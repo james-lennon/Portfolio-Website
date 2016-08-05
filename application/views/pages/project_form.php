@@ -20,6 +20,27 @@
 				</div>
 
 				<div class="field">
+					<label>Web URL:</label>
+					<div class="ui input">
+						<input type="url" name="web_url" placeholder="URL" value="<? if (isset($project)) echo $project->web_url; ?>">
+					</div>
+				</div>
+
+				<div class="field">
+					<label>iOS URL:</label>
+					<div class="ui input">
+						<input type="url" name="ios_url" placeholder="URL" value="<? if (isset($project)) echo $project->ios_url; ?>">
+					</div>
+				</div>
+
+				<div class="field">
+					<label>Android URL:</label>
+					<div class="ui input">
+						<input type="url" name="android_url" placeholder="URL" value="<? if (isset($project)) echo $project->android_url; ?>">
+					</div>
+				</div>
+
+				<div class="field">
 					<label>Description:</label>
 					<div class="ui input">
 						<textarea name="description" placeholder="Description"><? if (isset($project)) echo $project->description; ?></textarea>

@@ -20,13 +20,17 @@ class Project_model extends CI_Model {
 		$this->db->insert('project', $data);
 	}
 
-	public function change_project($project_id, $title, $description, 
-		$img_url, $date_timestamp) {
+	public function change_project(
+		$project_id, $title, $description, $img_url, $web_url, $ios_url, 
+		$android_url, $date_timestamp) {
 		
 		$data = [
-			'title'       => $title,
-			'description' => $description,
+			'title'          => $title,
+			'description'    => $description,
 			'img_url'        => $img_url,
+			'web_url'        => $web_url,
+			'ios_url'        => $ios_url,
+			'android_url'    => $android_url,
 			'date_timestamp' => $date_timestamp
 		];
 
