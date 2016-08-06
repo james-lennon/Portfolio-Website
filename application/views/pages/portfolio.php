@@ -9,6 +9,7 @@
 	<div class="ui right secondary stackable menu">
 		<a class="item">Projects</a>
 		<a class="item">About</a>
+		<a class="contact-open item">Contact</a>
 	</div>
 </div>
 
@@ -28,6 +29,7 @@
 			<div class="ui bottom right floated secondary stackable menu">
 				<a class="item">Projects</a>
 				<a class="item">About</a>
+				<a class="contact-open item">Contact</a>
 			</div>
 		</div>
 	</div>
