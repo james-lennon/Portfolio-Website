@@ -26,7 +26,9 @@ $(document).ready(function() {
     	setContactModalVisible(false);
     });
 
-    // setContactModalVisible(true);
+    $(".contact-open").click(function(){
+    	setContactModalVisible(true);
+    });
 
 });
 

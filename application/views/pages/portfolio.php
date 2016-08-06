@@ -1,10 +1,10 @@
 <? $this->load->view("templates/header", ['body_class'=>'']); ?>
 
 <div class="ui top fixed menu" id="nav-menu">
-	<div class="basic item">
-		<div class="ui mini image">
+	<div class="item">
+		<a class="ui contact-open mini image" href="#">
 			<img class="ui mini circular image" src="<?= base_url()."res/img/homepage/profile.jpg" ?>">
-		</div>
+		</a>
 	</div>
 	<div class="ui right secondary stackable menu">
 		<a class="item">Projects</a>
@@ -15,9 +15,9 @@
 
 <div class="ui basic container segment grid" id="title-bar">
 	<div class="middle aligned row">
-		<div class="two wide column">
+		<a class="two wide contact-open column" href="#">
 			<img class="ui small circular image" src="/res/img/homepage/profile.jpg">
-		</div>
+		</a>
 		<div class="five wide column">
 			<h1 class="ui left floated huge header">
 				James Lennon
