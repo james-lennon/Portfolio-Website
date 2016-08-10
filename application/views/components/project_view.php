@@ -46,8 +46,9 @@
 
 <script type="text/javascript">
 
-$(".project.image").click(function(){
-	console.log("yo");
+$(".project.image img").click(function(){
+	img_url = $(this).attr('src');
+	//TODO: show image modal here
 });
 
 </script>
