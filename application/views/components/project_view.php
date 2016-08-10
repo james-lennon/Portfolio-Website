@@ -31,11 +31,13 @@
 	<div class="ui divider"></div>
 
 	<div class="centered row">
-		<? foreach ($images as $image): ?>
-			<div class="ui medium project image">
-				<img src="<?= $image->url ?>">
-			</div>
-		<? endforeach; ?>
+		<div class="ui medium images">
+			<? foreach ($images as $image): ?>
+				<div class="ui project image">
+					<img src="<?= $image->url ?>">
+				</div>
+			<? endforeach; ?>
+		</div>
 	</div>
 	<div class="row">
 		<p>

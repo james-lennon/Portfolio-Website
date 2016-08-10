@@ -84,4 +84,12 @@
 
 .project.image {
 	padding: 2px;
+	max-height: 200px;
+	max-width: 200px;
+}
+
+.project.image img {
+	max-height: 200px;
+	max-width: 200px;
+	overflow: hidden;
 }
