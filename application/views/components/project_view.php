@@ -30,10 +30,9 @@
 	</div>
 	<div class="ui divider"></div>
 
-	<div class="row">
-		<p>Image grid goes here</p>
+	<div class="centered row">
 		<? foreach ($images as $image): ?>
-			<div class="image">
+			<div class="ui medium project image">
 				<img src="<?= $image->url ?>">
 			</div>
 		<? endforeach; ?>
@@ -44,3 +43,11 @@
 		</p>
 	</div>
 </div>
+
+<script type="text/javascript">
+
+$(".project.image").click(function(){
+	console.log("yo");
+});
+
+</script>
