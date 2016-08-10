@@ -32,6 +32,11 @@
 
 	<div class="row">
 		<p>Image grid goes here</p>
+		<? foreach ($images as $image): ?>
+			<div class="image">
+				<img src="<?= $image->url ?>">
+			</div>
+		<? endforeach; ?>
 	</div>
 	<div class="row">
 		<p>

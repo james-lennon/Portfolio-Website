@@ -8,10 +8,4 @@
       <span class="date"><?= date("F Y", $project->date_timestamp) ?></span>
     </div>
   </div>
-  <!-- <div class="extra content">
-    <div>
-      <i class="user icon"></i>
-      22 Friends
-    </div>
-  </div> -->
 </div>
