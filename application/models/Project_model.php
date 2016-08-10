@@ -24,6 +24,8 @@ class Project_model extends CI_Model {
 		];
 
 		$this->db->insert('project', $data);
+
+		return $this->db->insert_id();
 	}
 
 	public function change_project(
@@ -55,6 +57,8 @@ class Project_model extends CI_Model {
 	}
 
 	public function delete_project($project_id) {
+
+		$this->delete_images($project_id);
 
 		$query = $this->db->query("DELETE FROM project WHERE id = ?", [
 						$project_id]);
@@ -90,7 +94,7 @@ class Project_model extends CI_Model {
 		return $query->result();
 	}
 
-	public function remove_images($project_id) {
+	public function delete_images($project_id) {
 		$this->db->query("DELETE FROM image WHERE project_id = ?", [$project_id]);
 	}
 
@@ -99,7 +103,7 @@ class Project_model extends CI_Model {
 		$data = [
 			'url'        => $url,
 			'position'   => $position,
-			'caption'    => $position,
+			'caption'    => $caption,
 			'project_id' => $project_id
 		];
 

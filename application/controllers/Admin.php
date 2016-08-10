@@ -59,8 +59,10 @@ class Admin extends CI_Controller {
 			$this->load->model("project_model");
 
 			$project = $this->project_model->get_project($project_id);
+			$images  = $this->project_model->get_images($project_id);
 
 			$data['project'] = $project;
+			$data['images']  = $images;
 		}
 
 		$this->load->library('form_validation');
@@ -86,13 +88,24 @@ class Admin extends CI_Controller {
 			$images         = explode("\n", $image_urls);
 
 			$this->load->model('project_model');
+
+			/* create or edit project */
 			if ($project_id != NULL) {
 				$this->project_model->change_project(
 					$project_id, $title, $description, $img_url, $web_url, $ios_url, $android_url, $date_timestamp, $is_featured);
 			} else {
-				$this->project_model->add_project(
+				$project_id = $this->project_model->add_project(
 					$title, $description, $img_url, $web_url, $ios_url, $android_url, $date_timestamp, $is_featured);
 			}
+
+			/* replace images */
+			$this->project_model->delete_images($project_id);
+
+			for ($i=0; $i < count($images); $i++) { 
+				$this->project_model->add_image($images[$i], $i, "", $project_id);
+			}
+
+			/* redirect to homepage */
 			redirect("admin");
 		}
 	}

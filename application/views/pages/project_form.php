@@ -50,7 +50,16 @@
 				<div class="field">
 					<label>Image URLs:</label>
 					<div class="ui input">
-						<textarea name="images" placeholder="URLs"><? if (isset($project)) echo $project->description; ?></textarea>
+						<textarea name="images" placeholder="URLs"><? 
+							if (isset($images)) {
+								for ($i=0; $i < count($images); $i++) { 
+									if ($i != 0) {
+										echo "\n";
+									}
+									echo $images[$i]->url;
+								}
+							}
+							?></textarea>
 					</div>
 				</div>
 				
