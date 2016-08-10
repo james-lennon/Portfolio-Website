@@ -33,7 +33,16 @@
 	<div class="centered row">
 		<div class="ui medium images">
 			<? foreach ($images as $image): ?>
-				<div class="ui project image">
+				<div class="ui blurring dimmable project image">
+					<div class="ui inverted dimmer">
+				        <div class="content">
+				          	<div class="center">
+				            	<div class="ui inverted icon button">
+				            		<i class="zoom icon"></i>Add Friend
+				            	</div>
+				          	</div>
+				        </div>
+				    </div>
 					<img src="<?= $image->url ?>">
 				</div>
 			<? endforeach; ?>
@@ -51,6 +60,10 @@
 $(".project.image img").click(function(){
 	img_url = $(this).attr('src');
 	//TODO: show image modal here
+});
+
+$('.project.image').dimmer({
+  on: 'hover'
 });
 
 </script>
