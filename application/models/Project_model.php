@@ -82,4 +82,28 @@ class Project_model extends CI_Model {
 
 	}
 
+	public function get_images($project_id) {
+		$query = $this->db->query("
+					SELECT * FROM image WHERE project_id = ? ORDER BY position",
+					[$project_id]);
+
+		return $query->result();
+	}
+
+	public function remove_images($project_id) {
+		$this->db->query("DELETE FROM image WHERE project_id = ?", [$project_id]);
+	}
+
+	public function add_image($url, $position, $caption, $project_id) {
+
+		$data = [
+			'url'        => $url,
+			'position'   => $position,
+			'caption'    => $position,
+			'project_id' => $project_id
+		];
+
+		$this->db->insert('image', $data);
+	}
+
 }
