@@ -82,6 +82,8 @@ class Admin extends CI_Controller {
 			$date           = $this->input->post('date');
 			$date_timestamp = strtotime($date);
 			$is_featured    = $this->input->post('is_featured') == "on";
+			$image_urls     = $this->input->post('images');
+			$images         = explode("\n", $image_urls);
 
 			$this->load->model('project_model');
 			if ($project_id != NULL) {

@@ -46,6 +46,13 @@
 						<textarea name="description" placeholder="Description"><? if (isset($project)) echo $project->description; ?></textarea>
 					</div>
 				</div>
+
+				<div class="field">
+					<label>Image URLs:</label>
+					<div class="ui input">
+						<textarea name="images" placeholder="URLs"><? if (isset($project)) echo $project->description; ?></textarea>
+					</div>
+				</div>
 				
 				<div class="ui two fields">
 
