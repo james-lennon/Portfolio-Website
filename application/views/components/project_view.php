@@ -33,7 +33,7 @@
 	<div class="centered row">
 		<div class="ui medium images">
 			<? foreach ($images as $image): ?>
-				<div class="ui blurring dimmable project image">
+				<a class="ui blurring dimmable project image" href="#">
 					<div class="ui dimmer">
 				        <div class="content">
 				          	<div class="center">
@@ -42,12 +42,12 @@
 				        </div>
 				    </div>
 					<img src="<?= $image->url ?>">
-				</div>
+				</a>
 			<? endforeach; ?>
 		</div>
 	</div>
 	<div class="row">
-		<p>
+		<p class="project text">
 			<?= $project->description ?>
 		</p>
 	</div>
@@ -60,8 +60,8 @@ $(".project.image").click(function() {
 	displayImage(true, img_url);
 });
 
-$('.project.image').dimmer({
-  on: 'hover'
-});
+// $('.project.image').dimmer({
+//   on: 'hover'
+// });
 
 </script>

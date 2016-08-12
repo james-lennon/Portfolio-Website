@@ -88,6 +88,12 @@
 	max-width: 200px;*/
 }
 
+.project.text {
+	font-size: 14pt;
+	line-height: 30px;
+	padding: 20px;
+}
+
 /*.project.image img {
 	max-height: 200px;
 	max-width: 200px;

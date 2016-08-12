@@ -19,13 +19,13 @@
 		<a class="two wide contact-open column" href="#">
 			<img class="ui small circular image" src="/res/img/homepage/profile.jpg">
 		</a>
-		<div class="five wide column">
+		<div class="nine wide column">
 			<h1 class="ui left floated huge header">
 				James Lennon
 				<div class="sub header"><em>Sophomore at Harvard studying computer science and economics</em></div>
 			</h1>
 		</div>
-		<div class="nine wide bottom aligned column">
+		<div class="five wide bottom aligned column">
 			<div class="ui bottom right floated secondary stackable menu">
 				<a class="item">Projects</a>
 				<a class="item">About</a>
@@ -141,7 +141,7 @@
 				<div class="five wide column">
 					<h1 class="ui left floated huge header">
 						James Lennon
-						<div class="sub header"><em>I like pizza and stuff.</em></div>
+						<div class="sub header"><em>Sophomore at Harvard studying computer science and economics</em></div>
 						<br>
 						<a href="facebook.com">Facebook</a><br>
 						<a href="linkedin.com">LinkedIn</a><br>
