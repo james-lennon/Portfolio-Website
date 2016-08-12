@@ -37,9 +37,7 @@
 					<div class="ui dimmer">
 				        <div class="content">
 				          	<div class="center">
-				            	<div class="ui inverted icon image-view button">
-				            		<i class="zoom icon"></i>View
-				            	</div>
+				            	<p>Click to view</p>
 				          	</div>
 				        </div>
 				    </div>
@@ -58,7 +56,6 @@
 <script type="text/javascript">
 
 $(".project.image").click(function() {
-	console.log("clicked");
 	img_url = $(this).find('img').attr('src');
 	displayImage(true, img_url);
 });

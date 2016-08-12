@@ -26,9 +26,13 @@ $(document).ready(function() {
     	setContactModalVisible(false);
     });
 
-    $(".contact-open").click(function(){
+    $(".contact-open").click(function() {
     	setContactModalVisible(true);
     });
+
+    $("#image-modal-back").click(function() {
+    	displayImage(false);
+    })
 
 });
 
@@ -49,8 +53,9 @@ function setModalVisible(visible, projectId) {
 
 	if (visible) {
 		projectModal.modal({
-	    	blurring: true,
-	    	inverted: true
+	    	blurring:        true,
+	    	inverted:        true,
+	    	allowedMultiple: true
 	  	}).modal('show');
 
 		$.get(BASE_URL + "view/project/" + projectId, function(data) {
@@ -69,9 +74,13 @@ function displayImage(visible, url) {
 
 	if (visible) {
 		$("#image-modal-img").attr('src', url);
+		imageModal.modal({
+			allowedMultiple: true
+		});
 		imageModal.modal('show');
 	} else {
 		imageModal.modal('hide');
+		$("#project-modal").modal("show");
 	}
 }
 
