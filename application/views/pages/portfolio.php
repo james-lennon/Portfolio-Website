@@ -1,16 +1,19 @@
 <? $this->load->view("templates/header", ['body_class'=>'']); ?>
 
-<div class="ui top fixed menu" id="nav-menu">
-	<div class="item">
-		<a class="ui contact-open mini image" href="#">
+<div class="ui top fixed secondary blurred menu" id="nav-menu">
+	<div class="contact-open link item">
+		<div class="ui contact-open mini image">
 			<img class="ui mini circular image" src="<?= base_url()."res/img/homepage/profile.jpg" ?>">
-		</a>
+		</div>
 	</div>
-	<div class="ui right secondary stackable menu">
+	<div class="contact-open link item">
+		<h3>James Lennon</h3>
+	</div>
+	<!-- <div class="ui right secondary stackable menu">
 		<a class="item">Projects</a>
 		<a class="item">About</a>
 		<a class="contact-open item">Contact</a>
-	</div>
+	</div> -->
 </div>
 
 
@@ -20,17 +23,19 @@
 			<img class="ui small circular image" src="/res/img/homepage/profile.jpg">
 		</a>
 		<div class="nine wide column">
-			<h1 class="ui left floated huge header">
-				James Lennon
-				<div class="sub header"><em>Sophomore at Harvard studying computer science and economics</em></div>
-			</h1>
+			<a class="contact-open" href="#">
+				<h1 class="ui left floated huge header">
+					James Lennon
+					<div class="sub header"><em>Sophomore at Harvard studying computer science and economics</em></div>
+				</h1>
+			</a>
 		</div>
 		<div class="five wide bottom aligned column">
-			<div class="ui bottom right floated secondary stackable menu">
+			<!-- <div class="ui bottom right floated secondary stackable menu">
 				<a class="item">Projects</a>
 				<a class="item">About</a>
 				<a class="contact-open item">Contact</a>
-			</div>
+			</div> -->
 		</div>
 	</div>
 	<div class="ui divider"></div>
