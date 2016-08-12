@@ -63,6 +63,18 @@ function setModalVisible(visible, projectId) {
 
 }
 
+function displayImage(visible, url) {
+
+	imageModal = $("#image-modal");
+
+	if (visible) {
+		$("#image-modal-img").attr('src', url);
+		imageModal.modal('show');
+	} else {
+		imageModal.modal('hide');
+	}
+}
+
 function setContactModalVisible(visible) {
 
 	contactModal = $("#contact-modal");

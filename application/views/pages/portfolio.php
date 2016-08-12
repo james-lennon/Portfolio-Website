@@ -22,7 +22,7 @@
 		<div class="five wide column">
 			<h1 class="ui left floated huge header">
 				James Lennon
-				<div class="sub header"><em>I like pizza and stuff.</em></div>
+				<div class="sub header"><em>Sophomore at Harvard studying computer science and economics</em></div>
 			</h1>
 		</div>
 		<div class="nine wide bottom aligned column">
@@ -106,6 +106,21 @@
 		<br>
 		<br>
 		<div id="project-info"></div>
+	</div>
+</div>
+
+<div class="ui basic modal" id="image-modal">
+
+	<div class="content">
+		<div class="ui labeled icon button" id="image-modal-back">
+			<i class="left arrow icon"></i>
+			Back
+		</div>
+		<br>
+		<br>
+		<div class="ui huge image">
+			<img src="" id="image-modal-img"/>
+		</div>
 	</div>
 </div>
 

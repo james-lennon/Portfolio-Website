@@ -34,11 +34,11 @@
 		<div class="ui medium images">
 			<? foreach ($images as $image): ?>
 				<div class="ui blurring dimmable project image">
-					<div class="ui inverted dimmer">
+					<div class="ui dimmer">
 				        <div class="content">
 				          	<div class="center">
-				            	<div class="ui inverted icon button">
-				            		<i class="zoom icon"></i>Add Friend
+				            	<div class="ui inverted icon image-view button">
+				            		<i class="zoom icon"></i>View
 				            	</div>
 				          	</div>
 				        </div>
@@ -57,9 +57,10 @@
 
 <script type="text/javascript">
 
-$(".project.image img").click(function(){
-	img_url = $(this).attr('src');
-	//TODO: show image modal here
+$(".project.image").click(function() {
+	console.log("clicked");
+	img_url = $(this).find('img').attr('src');
+	displayImage(true, img_url);
 });
 
 $('.project.image').dimmer({
