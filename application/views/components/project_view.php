@@ -13,13 +13,13 @@
 				</div>
 				<div class="row">
 					<? if ($project->ios_url != NULL): ?>
-					<a href="<?= $project->ios_url ?>"><i class="large apple link icon"></i></a>
+					<a href="<?= $project->ios_url ?>" target="_blank"><i class="large apple link icon"></i></a>
 					<? endif; ?>
 					<? if ($project->android_url != NULL): ?>
-					<a href="<?= $project->android_url ?>"><i class="large android link icon"></i></a>
+					<a href="<?= $project->android_url ?>" target="_blank"><i class="large android link icon"></i></a>
 					<? endif; ?>
 					<? if ($project->web_url != NULL): ?>
-					<a href="<?= $project->web_url ?>"><i class="large external link icon"></i></a>
+					<a href="<?= $project->web_url ?>" target="_blank"><i class="large external link icon"></i></a>
 					<? endif; ?>
 					<? if ($admin): ?>
 					<a href="<?= base_url() ?>admin/edit_project/<?= $project->id ?>"><i class="large black edit icon"></i></a>
@@ -45,6 +45,11 @@
 				</a>
 			<? endforeach; ?>
 		</div>
+		<? if ($project->youtube_id != NULL): ?>
+			<!-- <div class="ui embed" data-source="youtube" data-id="<?= $project->youtube_id ?>" >
+			</div> -->
+			<iframe width="480" height="390" src="https://www.youtube.com/embed/<?= $project->youtube_id ?>" frameborder="0" allowfullscreen></iframe>
+		<? endif; ?>
 	</div>
 	<div class="row">
 		<p class="project text">
