@@ -12,6 +12,7 @@
 #dream_segment {
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 500px;
 	min-width: 500px;
 	min-height: 200px;
 }
