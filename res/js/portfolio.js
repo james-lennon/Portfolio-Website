@@ -58,9 +58,12 @@ function setModalVisible(visible, projectId) {
 	    	allowedMultiple: true
 	  	}).modal('show');
 
+	  	projectModal.addClass('loading');
+
 		$.get(BASE_URL + "view/project/" + projectId, function(data) {
 			projectInfo.html(data);
 			projectModal.modal('refresh');
+	  		// projectModal.removeClass('loading');
 		});
 	} else {
 		projectModal.modal('hide');

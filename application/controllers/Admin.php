@@ -102,7 +102,7 @@ class Admin extends CI_Controller {
 			$this->project_model->delete_images($project_id);
 
 			for ($i=0; $i < count($images); $i++) {
-				if (count($images[$i]) > 0)
+				if (strlen($images[$i]) > 0)
 					$this->project_model->add_image($images[$i], $i, "", $project_id);
 			}
 
