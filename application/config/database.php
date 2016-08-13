@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
+	'hostname' => 'jameslennon.org',
 	'username' => 'root',
-	'password' => 'root',
+	'password' => '',
 	'database' => 'portfolio',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
