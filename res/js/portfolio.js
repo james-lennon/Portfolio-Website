@@ -1,5 +1,5 @@
 
-BASE_URL = "http://localhost:8888/"
+BASE_URL = "/"
 
 $(document).ready(function() {
 
