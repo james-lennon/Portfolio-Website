@@ -1,5 +1,16 @@
 
-BASE_URL = "http://localhost:8888/"
+BASE_URL = "http://localhost:8888/";
+
+LOADING_HTML = 
+'<div class=\"ui basic segment\"> \
+  <br> \
+  <br> \
+  <br> \
+    <div class=\"ui huge text loader\">Loading</div> \
+  <p></p> \
+  <p></p> \
+  <p></p> \
+</div>';
 
 $(document).ready(function() {
 
@@ -51,6 +62,8 @@ function setModalVisible(visible, projectId) {
 	projectModal = $("#project-modal");
 	projectInfo  = $("#project-info");
 
+	projectInfo.html(LOADING_HTML);
+
 	if (visible) {
 		projectModal.modal({
 	    	blurring:        true,
@@ -58,12 +71,9 @@ function setModalVisible(visible, projectId) {
 	    	allowedMultiple: true
 	  	}).modal('show');
 
-	  	projectModal.addClass('loading');
-
 		$.get(BASE_URL + "view/project/" + projectId, function(data) {
 			projectInfo.html(data);
 			projectModal.modal('refresh');
-	  		// projectModal.removeClass('loading');
 		});
 	} else {
 		projectModal.modal('hide');
