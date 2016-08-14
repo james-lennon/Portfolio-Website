@@ -1,5 +1,5 @@
 
-<div class="ui grid">
+<div class="ui loading grid">
 	<div class="bottom aligned row">
 		<div class="four wide column">
 			<div class="ui image">
