@@ -17,12 +17,12 @@
 </div>
 
 
-<div class="ui basic container segment grid" id="title-bar">
+<div class="ui basic container segment stackable grid" id="title-bar">
 	<div class="middle aligned row">
 		<a class="two wide contact-open column" href="#">
 			<img class="ui small circular image" src="/res/img/homepage/profile.jpg">
 		</a>
-		<div class="nine wide column">
+		<div class="fourteen wide column">
 			<a class="contact-open" href="#">
 				<h1 class="ui left floated huge header">
 					James Lennon
@@ -106,12 +106,12 @@
 		</div>
 		<br>
 		<br>
-		<div class="ui basic container segment grid" id="title-bar">
+		<div class="ui basic container segment stackable grid" id="title-bar">
 			<div class="middle aligned row">
-				<div class="seven wide column">
+				<div class="four wide column">
 					<img class="ui medium circular image" src="/res/img/homepage/profile.jpg">
 				</div>
-				<div class="five wide column">
+				<div class="twelve wide column">
 					<h1 class="ui left floated huge header">
 						James Lennon
 						<div class="sub header"><em>Sophomore at Harvard studying computer science and economics</em></div>
