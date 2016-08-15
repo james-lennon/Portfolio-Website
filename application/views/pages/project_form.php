@@ -27,6 +27,13 @@
 				</div>
 
 				<div class="field">
+					<label>Youtube ID:</label>
+					<div class="ui input">
+						<input type="text" name="youtube_id" placeholder="ID" value="<? if (isset($project)) echo $project->youtube_id; ?>">
+					</div>
+				</div>
+
+				<div class="field">
 					<label>iOS URL:</label>
 					<div class="ui input">
 						<input type="url" name="ios_url" placeholder="URL" value="<? if (isset($project)) echo $project->ios_url; ?>">
