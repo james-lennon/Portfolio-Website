@@ -116,10 +116,9 @@
 						James Lennon
 						<div class="sub header"><em>Sophomore at Harvard studying computer science and economics</em></div>
 						<br>
-						<a href="facebook.com">Facebook</a><br>
-						<a href="linkedin.com">LinkedIn</a><br>
-						<a href="google.com">Google</a><br>
-						<a href="poo.com">Poo</a><br>
+						<a href="https://www.facebook.com/james.lennon.3511" target="_blank" >Facebook</a><br>
+						<a href="https://www.linkedin.com/profile/view?id=275229364" target="_blank">LinkedIn</a><br>
+						<a href="https://github.com/jameslennon321" target="_blank">Github</a><br>
 					</h1>
 				</div>
 			</div>

@@ -5,9 +5,10 @@
 		<div class="three wide column">
 		  <h4 class="ui inverted header">Contact</h4>
 		  <div class="ui inverted link list">
-			<a href="#" class="item">Email</a>
-			<a href="#" class="item">LinkedIn</a>
-			<a href="#" class="item">Facebook</a>
+			<a href="#" target="_blank" class="item">Email</a>
+			<a href="https://github.com/jameslennon321" target="_blank" class="item">Github</a>
+			<a href="https://www.linkedin.com/profile/view?id=275229364" target="_blank" class="item">LinkedIn</a>
+			<a href="https://www.facebook.com/james.lennon.3511" target="_blank" class="item">Facebook</a>
 		  </div>
 		</div>
 		<div class="three wide column">
