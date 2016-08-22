@@ -13,16 +13,16 @@
 				</div>
 				<div class="row">
 					<? if ($project->ios_url != NULL): ?>
-					<a class="project link" href="<?= $project->ios_url ?>" target="_blank"><i class="huge apple link icon"></i></a>
+					<a class="project link" href="<?= $project->ios_url ?>" target="_blank"><i class="big apple link icon"></i></a>
 					<? endif; ?>
 					<? if ($project->android_url != NULL): ?>
-					<a class="project link" href="<?= $project->android_url ?>" target="_blank"><i class="huge android link icon"></i></a>
+					<a class="project link" href="<?= $project->android_url ?>" target="_blank"><i class="big android link icon"></i></a>
 					<? endif; ?>
 					<? if ($project->web_url != NULL): ?>
-					<a class="project link" href="<?= $project->web_url ?>" target="_blank"><i class="huge external link icon"></i></a>
+					<a class="project link" href="<?= $project->web_url ?>" target="_blank"><i class="big external link icon"></i></a>
 					<? endif; ?>
 					<? if ($admin): ?>
-					<a class="project link" href="<?= base_url() ?>admin/edit_project/<?= $project->id ?>"><i class="huge black edit icon"></i></a>
+					<a class="project link" href="<?= base_url() ?>admin/edit_project/<?= $project->id ?>"><i class="big black edit icon"></i></a>
 					<? endif; ?>
 				</div>
 			</div>
