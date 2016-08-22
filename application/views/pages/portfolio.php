@@ -114,12 +114,19 @@
 				<div class="twelve wide column">
 					<h1 class="ui left floated huge header">
 						James Lennon
-						<div class="sub header"><em>Sophomore at Harvard studying computer science and economics</em></div>
-						<br>
-						<a href="https://www.facebook.com/james.lennon.3511" target="_blank" >Facebook</a><br>
-						<a href="https://www.linkedin.com/profile/view?id=275229364" target="_blank">LinkedIn</a><br>
-						<a href="https://github.com/jameslennon321" target="_blank">Github</a><br>
 					</h1>
+					<br>
+					<div class="sub header"><em>Sophomore at Harvard studying computer science and economics</em></div>
+					<br>
+					<a class="ui icon button" href="https://www.facebook.com/james.lennon.3511" target="_blank" >
+						<i class="facebook icon"></i>
+					</a>
+					<a class="ui icon button" href="https://www.linkedin.com/profile/view?id=275229364" target="_blank">
+						<i class="linkedin icon"></i>
+					</a>
+					<a class="ui icon button" href="https://github.com/jameslennon321" target="_blank">
+						<i class="github icon"></i>
+					</a>
 				</div>
 			</div>
 		</div>
