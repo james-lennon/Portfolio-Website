@@ -70,6 +70,7 @@ function setModalVisible(visible, projectId) {
 	    	inverted:        true,
 	    	allowedMultiple: true
 	  	}).modal('show');
+		projectModal.modal('refresh');
 
 		$.get(BASE_URL + "view/project/" + projectId, function(data) {
 			projectInfo.html(data);
@@ -77,6 +78,7 @@ function setModalVisible(visible, projectId) {
 		});
 	} else {
 		projectModal.modal('hide');
+		projectModal.modal('refresh');
 	}
 
 }
