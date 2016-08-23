@@ -19,8 +19,9 @@
 		  </div>
 		</div>
 		<div class="seven wide column">
-		  <h4 class="ui inverted header">Footer Header</h4>
-		  <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+		  <h4 class="ui inverted header">Feel free to contact me.</h4>
+		  <br>
+		  <p>I made this website from scratch using Semtantic UI and CodeIgniter PHP.</p>
 		</div>
 	  </div>
 	  <div class="ui center aligned container">
