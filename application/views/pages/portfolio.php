@@ -119,6 +119,9 @@
 							</h1>
 						</div>
 						<div class="row">
+							<h5>Email: <a href="mailto:jameslennon321@gmail.com" target="_top">jameslennon321@gmail.com</a></h5>
+						</div>
+						<div class="row">
 							<div class="ui buttons">
 								<a class="ui blue icon button" href="https://www.facebook.com/james.lennon.3511" target="_blank" >
 									<i class="facebook icon"></i>
