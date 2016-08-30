@@ -7,7 +7,7 @@
 		  <div class="ui inverted link list">
 			<a href="#" target="_blank" class="item">Email</a>
 			<a href="https://github.com/jameslennon321" target="_blank" class="item">Github</a>
-			<a href="https://www.linkedin.com/profile/view?id=275229364" target="_blank" class="item">LinkedIn</a>
+			<a href="https://www.linkedin.com/in/james-lennon-30421078?trk=hp-identity-name" target="_blank" class="item">LinkedIn</a>
 			<a href="https://www.facebook.com/james.lennon.3511" target="_blank" class="item">Facebook</a>
 		  </div>
 		</div>
@@ -18,10 +18,11 @@
 			<a href="/dream_gen" class="item">Dream Generator</a>
 		  </div>
 		</div>
-		<div class="seven wide column">
-		  <h4 class="ui inverted header">Feel free to contact me.</h4>
+		<div class="eight wide column">
+		  <!-- <h4 class="ui inverted header">Feel free to contact me.</h4> -->
 		  <br>
-		  <p>I made this website from scratch using Semtantic UI and CodeIgniter PHP.</p>
+		  <br>
+		  <p>This website was made from scratch using Semtantic UI and CodeIgniter PHP.</p>
 		</div>
 	  </div>
 	  <div class="ui center aligned container">
