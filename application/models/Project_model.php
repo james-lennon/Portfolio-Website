@@ -9,7 +9,7 @@ class Project_model extends CI_Model {
 	}
 
 	public function add_project(
-		$title, $description, $img_url, $web_url, $ios_url, 
+		$title, $description, $img_url, $web_url, $youtube_id, $ios_url, 
 		$android_url,$date_timestamp, $is_featured) {
 
 		$data = [
@@ -17,6 +17,7 @@ class Project_model extends CI_Model {
 			'description'    => $description,
 			'img_url'        => $img_url,
 			'web_url'        => $web_url,
+			'youtube_id'     => $youtube_id,
 			'ios_url'        => $ios_url,
 			'android_url'    => $android_url,
 			'date_timestamp' => $date_timestamp,
@@ -29,7 +30,7 @@ class Project_model extends CI_Model {
 	}
 
 	public function change_project(
-		$project_id, $title, $description, $img_url, $web_url, $ios_url, 
+		$project_id, $title, $description, $img_url, $web_url, $youtube_id, $ios_url, 
 		$android_url, $date_timestamp, $is_featured) {
 		
 		$data = [
@@ -37,6 +38,7 @@ class Project_model extends CI_Model {
 			'description'    => $description,
 			'img_url'        => $img_url,
 			'web_url'        => $web_url,
+			'youtube_id'     => $youtube_id,
 			'ios_url'        => $ios_url,
 			'android_url'    => $android_url,
 			'date_timestamp' => $date_timestamp,

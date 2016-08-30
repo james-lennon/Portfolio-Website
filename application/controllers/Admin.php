@@ -79,6 +79,7 @@ class Admin extends CI_Controller {
 			$description    = $this->input->post('description');
 			$img_url        = $this->input->post('img_url');
 			$web_url        = $this->input->post('web_url');
+			$youtube_id     = $this->input->post('youtube_id');
 			$ios_url        = $this->input->post('ios_url');
 			$android_url    = $this->input->post('android_url');
 			$date           = $this->input->post('date');
@@ -92,10 +93,10 @@ class Admin extends CI_Controller {
 			/* create or edit project */
 			if ($project_id != NULL) {
 				$this->project_model->change_project(
-					$project_id, $title, $description, $img_url, $web_url, $ios_url, $android_url, $date_timestamp, $is_featured);
+					$project_id, $title, $description, $img_url, $web_url, $youtube_id, $ios_url, $android_url, $date_timestamp, $is_featured);
 			} else {
 				$project_id = $this->project_model->add_project(
-					$title, $description, $img_url, $web_url, $ios_url, $android_url, $date_timestamp, $is_featured);
+					$title, $description, $img_url, $web_url, $youtube_id, $ios_url, $android_url, $date_timestamp, $is_featured);
 			}
 
 			/* replace images */
