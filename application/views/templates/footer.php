@@ -7,7 +7,7 @@
 		  <div class="ui inverted link list">
 			<a href="#" target="_blank" class="item">Email</a>
 			<a href="https://github.com/jameslennon321" target="_blank" class="item">Github</a>
-			<a href="https://www.linkedin.com/profile/view?id=275229364" target="_blank" class="item">LinkedIn</a>
+			<a href="https://www.linkedin.com/in/james-lennon-30421078?trk=hp-identity-name" target="_blank" class="item">LinkedIn</a>
 			<a href="https://www.facebook.com/james.lennon.3511" target="_blank" class="item">Facebook</a>
 		  </div>
 		</div>
