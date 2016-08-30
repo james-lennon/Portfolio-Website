@@ -109,18 +109,27 @@
 		<div class="ui basic container segment stackable grid" id="title-bar">
 			<div class="middle aligned row">
 				<div class="four wide column">
-					<img class="ui medium circular image" src="/res/img/homepage/profile.jpg">
+					<img class="ui small circular image" src="/res/img/homepage/profile.jpg">
 				</div>
 				<div class="twelve wide column">
-					<h1 class="ui left floated huge header">
-						James Lennon
-						<div class="sub header"><em>Sophomore at Harvard studying computer science and economics</em></div>
-						<br>
-						<a href="facebook.com">Facebook</a><br>
-						<a href="linkedin.com">LinkedIn</a><br>
-						<a href="google.com">Google</a><br>
-						<a href="poo.com">Poo</a><br>
-					</h1>
+					<div class="ui grid">
+						<div class="row">
+							<h1 class="ui left floated huge header">
+								Contact:
+							</h1>
+						</div>
+						<div class="row">
+							<a class="ui icon button" href="https://www.facebook.com/james.lennon.3511" target="_blank" >
+								<i class="facebook icon"></i>
+							</a>
+							<a class="ui icon button" href="https://www.linkedin.com/profile/view?id=275229364" target="_blank">
+								<i class="linkedin icon"></i>
+							</a>
+							<a class="ui icon button" href="https://github.com/jameslennon321" target="_blank">
+								<i class="github icon"></i>
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
